@@ -43,8 +43,6 @@ function checkAnswer(currentLevel) {
       startOver();
     }
 }
-
-
 function nextSequence() {
   userClickedPattern = [];
   level++;
@@ -56,19 +54,16 @@ function nextSequence() {
   $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
   playSound(randomChosenColour);
 }
-
 function animatePress(currentColor) {
   $("#" + currentColor).addClass("pressed");
   setTimeout(function () {
     $("#" + currentColor).removeClass("pressed");
   }, 100);
 }
-
 function playSound(name) {
   var audio = new Audio("sounds/" + name + ".mp3");
   audio.play();
 }
-
 function startOver() {
   level = 0;
   gamePattern = [];
